@@ -1,0 +1,9 @@
+{
+    "name": "json-import",
+        "version": "0.0.1",
+        "private": true,
+        "dependencies": {
+        "mongoose": ">=2.7.0",
+        "request": "2.10.0"
+    }
+}
