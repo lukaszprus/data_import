@@ -18,6 +18,7 @@ var UserSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
+		unique: true,
         match: emailRegexp
     },
     gender: {
@@ -28,9 +29,13 @@ var UserSchema = new mongoose.Schema({
     },
     birthday: {
         type: Date,
+        required: true,
         validate: [
         validate_18_years_old_or_more,
             'You must be 18 years old or more']
+    },
+    bio: {
+        type: String
     },
     twitter: {
         type: String,
